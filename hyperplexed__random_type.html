@@ -84,6 +84,42 @@ Lorem ipsum dolor sit emit
 <!-- -->
 
 <script type="text/javascript">
+
+
+/*
+
+
+setTimeout(
+    coroutine(document.querySelector("._BOX_0_")),
+    2000
+);
+
+
+
+for (let i0 = 0 ; i0 < elems.length ; i0 += 1)
+{
+	  elems[i0].onclick = function(e)
+	  {
+		    coroutine(e.target);
+	  };
+}
+
+
+
+
+// coroutine //
+function coroutine(elem)
+{
+		let _interval = setInterval(
+			// do somthng with elem
+			// clearInterval(_interval) once done
+
+		 , 30);
+}
+// coroutine //
+
+
+*/
 	
 let elem_0 = document.querySelector("._BOX_0_0_");
 let str_0 = elem_0.getAttribute("data-somthng").toUpperCase();
@@ -125,7 +161,7 @@ setTimeout(
 				//
 
 		},
- 4000);
+ 2000);
 </script>
 
 
@@ -148,10 +184,9 @@ let text_random_type = function(e)
 
 			for(let i0 = 0 ; i0 < str.length ; i0 += 1)
 			{
-				
-				new_str += (i0 <= iter)? 
-				str[i0] :
-				letters[Math.floor(Math.random() * letters.length)];
+					// if(str[i0] == ' ') { new_str += str[i0]; continue; }
+					if(i0 <= iter)     { new_str += str[i0]; continue; }
+					if(i0 > iter)      { new_str += letters[Math.floor(Math.random() * letters.length)]; }
 			}
 			e.target.innerHTML = new_str;
 			
@@ -184,6 +219,9 @@ for(let i0 = 0 ; i0 < elems.length ; i0 += 1)
 
 
 <!-- -->
+
+
+
 
 
 
