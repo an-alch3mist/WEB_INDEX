@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HyperPlexed</title>
+
+<!-- -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+</style>
+
+
+<style type="text/css">
+	
+*
+{
+	margin : 0px;
+	padding : 0px;
+}
+
+html
+{
+	text-size-adjust: 190%;
+}
+
+body
+{
+	background-color: #222;
+}
+
+
+
+._BOX_0_
+{
+	color : #eee;
+	font-family: 'Space Mono', monospace;
+
+	padding : 1rem;
+	margin : 1rem auto;
+	border : 3px solid #eee;
+	width : calc(100vw - 2 * 1rem  - 2 * 1rem - 2 * 2px);
+	max-width : 50rem;
+
+	box-shadow:  0px 5px #eee;
+	user-select: none;
+}
+
+
+
+
+
+
+
+
+</style>
+<!-- -->
+
+
+</head>
+
+
+<body>
+
+
+
+
+<!-- -->	
+<div data-somthng="ALCH3-MIST" style="font-size: 3rem;"  class = "_BOX_0_ _BOX_0_0_">ALCH3-MIST</div>
+
+<div data-somthng="Lorem ipsum dolor sit emit" style="font-size: 1rem;"
+class = "_BOX_0_">
+Lorem ipsum dolor sit emit
+</div>
+
+
+<!-- -->
+
+
+
+
+
+<!-- -->
+
+<script type="text/javascript">
+	
+let elem_0 = document.querySelector("._BOX_0_0_");
+let str_0 = elem_0.getAttribute("data-somthng").toUpperCase();
+let letters_0 = "_-AHNMZUQDFIOL";
+
+
+// do after 4000ms  //
+setTimeout(
+		function()
+		{
+
+				let iter_0  = 0;
+				//
+				// interval //
+				//  do after every 30ms until clearInterval //
+				let _interval_0 = setInterval(
+
+						function()
+						{
+							let new_str_0 = "";
+
+							for(let i0 = 0 ; i0 < str_0.length ; i0 += 1)
+							{
+								
+								new_str_0 += (i0 <= iter_0)? 
+								str_0[i0] :
+								letters_0[Math.floor(Math.random() * letters_0.length)];
+							}
+							elem_0.innerHTML = new_str_0;
+							
+
+							if(iter_0 > str_0.length)
+							{ clearInterval(_interval_0); }
+
+							iter_0 += 1/2;
+						}
+				,30 );
+				// interval //
+				//
+
+		},
+ 4000);
+</script>
+
+
+
+<script type="text/javascript">
+
+let text_random_type = function(e)
+{
+
+	let str = e.target.getAttribute("data-somthng").toUpperCase();
+	let letters = "_-AHNMZUQDFIOL";
+
+	let iter  = 0;
+	
+	let _interval = setInterval(
+
+		function()
+		{
+			let new_str = "";
+
+			for(let i0 = 0 ; i0 < str.length ; i0 += 1)
+			{
+				
+				new_str += (i0 <= iter)? 
+				str[i0] :
+				letters[Math.floor(Math.random() * letters.length)];
+			}
+			e.target.innerHTML = new_str;
+			
+
+
+
+			if(iter > str.length)
+			{clearInterval(_interval); }
+
+			iter += 1;
+		}
+
+	,30);
+}
+
+
+
+let elems = document.querySelectorAll("._BOX_0_");
+
+for(let i0 = 0 ; i0 < elems.length ; i0 += 1)
+{
+		//elems[i0].onmouseover = text_random_type;
+		elems[i0].onclick = text_random_type;
+
+}
+
+
+
+</script>
+
+
+<!-- -->
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
